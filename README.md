@@ -7,3 +7,7 @@ Collection of competitive coding problems and solution. An open-source repo for 
 3. Mention the question in comments above the class.
 4. Create class name as Question followed by the issue number.
 5. Create a test class with all the valid test cases for the question.
+
+## Question
+1. What is competitive programming?
+Asked by: [Christina L](https://github.com/christina-ml)

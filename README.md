@@ -1,7 +1,7 @@
 # competitive-coding
 Collection of competitive coding problems and solution. An open-source repo for beginners to have first PR opportunity.
 
-##Usage
+## Usage
 1. Create an issue of any new competitive programming question
 2. Once approved go ahead an raise PR for it.
 3. Mention the question in comments above the class.

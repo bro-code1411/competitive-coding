@@ -3,8 +3,8 @@ package recursion;
 import java.util.List;
 
 /**
- * Tell if a string can be constructed by given list of strings.
- * You can repeat, rearrange strings or not use some of it.
+ * Tell if a string can be constructed by a given list of strings.
+ * You can repeat, rearrange strings or not use some of them
  *
  * Sample Test Case:
  * List of string: "a","aba","c","d"

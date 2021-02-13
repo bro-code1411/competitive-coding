@@ -1,4 +1,7 @@
 # competitive-coding
+![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)
+[![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
+
 Collection of competitive coding problems and solution. An open-source repo for beginners to have first PR opportunity.
 
 ## Usage

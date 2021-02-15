@@ -5,6 +5,12 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+/**
+ * Implement LRU cache of a given max capacity and expose get and put methods.
+ *
+ * get: retrieves the least recently used key in cache
+ * put: to insert/update a key in cache
+ */
 class Node {
     int key;
     int value;

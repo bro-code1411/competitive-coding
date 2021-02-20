@@ -25,3 +25,10 @@ Horizontal & vertical scaling \
 Horizontal-scaling is often based on the partitioning of the data i.e. each node contains only part of the data. \
 Vertical-scaling the data resides on a single node and scaling is done through multi-core i.e. spreading the load between the CPU and RAM resources of that machine.
 
+#### CAP theorem
+- Consistency: 
+- Availability: 
+- Partition tolerance:
+- CA: RDBMS, SQL, MYSQL,
+- CP: redis, mongodb
+- AP: casandra,DynamoDB

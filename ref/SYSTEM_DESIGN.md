@@ -49,9 +49,9 @@ Vertical-scaling the data resides on a single node and scaling is done through m
         - replica master/slave master/master
 - cache
     - What When
-    - Fanout Service
+    - Fan-out Service
 - scale
-    - Multinode arch
+    - Multi-node arch
 - service discovery
 - queues
 - ELB
@@ -65,4 +65,4 @@ Vertical-scaling the data resides on a single node and scaling is done through m
 - Database Partitioning vs Sharding
 - Kafka
 - Spark streaming, hadoop
-- consisting hashing Memcache
+- onsisting hashing Memcache

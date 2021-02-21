@@ -32,3 +32,37 @@ Vertical-scaling the data resides on a single node and scaling is done through m
 - CA: RDBMS, SQL, MYSQL,
 - CP: redis, mongodb
 - AP: casandra,DynamoDB
+
+#### System Design
+
+- Requirements
+- Feature
+- API
+- DB
+    - Choice of DB
+    - schema
+    - index
+    - scale
+        - handel heavy write/reads
+        - CAP theorem
+        - horizontal vertical
+        - replica master/slave master/master
+- cache
+    - What When
+    - Fanout Service
+- scale
+    - Multinode arch
+- service discovery
+- queues
+- ELB
+- Notification
+- Sample Ques
+    - Quora, Insta, Twitter
+    - Rate Limiter
+    - Cab service
+    - News Aggregator
+
+- Database Partitioning vs Sharding
+- Kafka
+- Spark streaming, hadoop
+- consisting hashing Memcache

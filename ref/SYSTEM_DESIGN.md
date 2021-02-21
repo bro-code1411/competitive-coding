@@ -65,4 +65,4 @@ Vertical-scaling the data resides on a single node and scaling is done through m
 - Database Partitioning vs Sharding
 - Kafka
 - Spark streaming, hadoop
-- onsisting hashing Memcache
+- Consisting hashing Memcache

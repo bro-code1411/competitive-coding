@@ -40,20 +40,20 @@ Vertical-scaling the data resides on a single node and scaling is done through m
 - API
 - DB
     - Choice of DB
-    - schema
-    - index
-    - scale
-        - handel heavy write/reads
+    - Schema
+    - Index
+    - Scale
+        - Handel heavy write/reads
         - CAP theorem
-        - horizontal vertical
-        - replica master/slave master/master
-- cache
+        - Horizontal vertical
+        - Replica master/slave master/master
+- Cache
     - What When
     - Fan-out Service
-- scale
+- Scale
     - Multi-node arch
-- service discovery
-- queues
+- Service discovery
+- Queues
 - ELB
 - Notification
 - Sample Ques
@@ -64,5 +64,5 @@ Vertical-scaling the data resides on a single node and scaling is done through m
 
 - Database Partitioning vs Sharding
 - Kafka
-- Spark streaming, hadoop
+- Spark streaming, Hadoop
 - Consisting hashing Memcache

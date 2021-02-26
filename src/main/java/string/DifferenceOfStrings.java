@@ -34,6 +34,5 @@ public class DifferenceOfStrings {
             }
         }
         return result;
-
     }
 }

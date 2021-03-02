@@ -30,7 +30,7 @@ public class DifferenceOfStrings {
                 if (i + j == a.length()) {
                     return true;
                 }
-                result = solve(a.substring((i + j), b));
+                result = solve(a.substring(i + j) ,b);
             }
         }
         return result;

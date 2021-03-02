@@ -1,5 +1,6 @@
 package string;
 
+import java.util.Collections;
 import java.util.HashSet;
 
 /**
@@ -16,7 +17,13 @@ import java.util.HashSet;
 public class DifferenceOfStrings {
     public static void main(String[] args) {
         String a = "geeksforgeeks";
-        HashSet<String> b = new HashSet<>("a", "geeks", "for", "sda", "gee");
+        HashSet<String> b = new HashSet<>(){{
+            add("a");
+            add("geeks");
+            add("for");
+            add("sda");
+            add("gee");
+        }};
         boolean res = solve(a, b);
         System.out.println(res);
     }

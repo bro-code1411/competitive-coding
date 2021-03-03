@@ -9,7 +9,7 @@ import java.util.HashSet;
  * Input:
  * string1 = "computer"
  * string2 = "cat"
- * Output: "ompuer"
+ * Output= "ompuer"
  * Explanation: After removing characters(c, a, t)
  * from string1 we get "ompuer".
  */

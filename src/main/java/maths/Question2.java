@@ -3,7 +3,7 @@ package maths;
 /**
  * Return sum of two integers
  * <p>
- * Sample Test Case:
+ * Sample customDS.Test Case:
  * 1 2
  * Output: 3
  */

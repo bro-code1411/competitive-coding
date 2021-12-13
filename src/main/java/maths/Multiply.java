@@ -3,7 +3,7 @@ package maths;
 /**
  * Return multiplication of two integers
  * <p>
- * Sample Test Case:
+ * Sample customDS.Test Case:
  * 4 2
  * Output: 8
  */

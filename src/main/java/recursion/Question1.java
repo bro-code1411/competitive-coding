@@ -6,7 +6,7 @@ import java.util.List;
  * Tell if a string can be constructed by a given list of strings.
  * You can repeat, rearrange strings or not use some of them
  *
- * Sample Test Case:
+ * Sample customDS.Test Case:
  * List of string: "a","aba","c","d"
  * Create: cacaabaaba
  * Output: true

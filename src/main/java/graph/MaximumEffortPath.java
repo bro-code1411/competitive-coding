@@ -31,13 +31,13 @@ public class MaximumEffortPath {
             return true;
         }
         vis[x][y] = true;
-        for (int[] direction : directions) {
-            int adjacentX = x + direction[0];
-            int adjacentY = y + direction[1];
-            if (isValid(adjacentX, adjacentY, row, col) && !vis[adjacentX][adjacentY]) {
-                int diff = Math.abs(arr[adjacentX][adjacentY] - arr[x][y]);
+        for (int[] dir : directions) {
+            int adjX = x + dir[0];
+            int adjY = y + dir[1];
+            if (isValid(adjX, adjY, row, col) && !vis[adjX][adjY]) {
+                int diff = Math.abs(arr[adjX][adjY] - arr[x][y]);
                 if (diff <= mid) {
-                    if (canReachDest(adjacentX, adjacentY, arr, vis, row, col, mid))
+                    if (canReachDest(adjX, adjY, arr, vis, row, col, mid))
                         return true;
                 }
             }

@@ -78,4 +78,7 @@ class TaxiProfit {
         }
         return dp[0];
     }
+    public static long maxTaxiEarningsSplit(List<Long> pickup, List<Long>drop, List<Long>tip) {
+        return 0L;
+    }
 };

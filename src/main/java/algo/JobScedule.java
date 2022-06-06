@@ -1,22 +1,27 @@
 package algo;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
 
 class JobSchedule {
-    class The_Comparator implements Comparator<ArrayList<Integer>> {
-        public int compare(ArrayList<Integer> list1, ArrayList<Integer> list2) {
-            return list1.get(0) - list2.get(0);
+    public static void main(String[] args) {
+        List<Long>pickup=new ArrayList<>(Arrays.asList(0L,2L,9L,10L,11L,12L)) ;
+        List<Long>drop=new ArrayList<>(Arrays.asList(5L,9L,11L,11L,14L,17L)) ;
+        List<Long>tip=new ArrayList<>(Arrays.asList(1L,2L,3L,2L,2L,1L)) ;
+
+        System.out.println(maxTaxiEarningsSplit(pickup,drop,tip));
+    }
+
+    static class Comp implements Comparator<ArrayList<Long>> {
+        public int compare(ArrayList<Long> list1, ArrayList<Long> list2) {
+            return (int) (list1.get(0) - list2.get(0));
         }
     }
 
-    private long findMaxProfit(List<List<Long>> jobs) {
+    private static long findMaxProfit(List<List<Long>> jobs) {
         int n = jobs.size();
         long maxProfit = 0;
         // min heap having {endTime, profit}
-        PriorityQueue<ArrayList<Long>> pq = new PriorityQueue<>(new The_Comparator());
+        PriorityQueue<ArrayList<Long>> pq = new PriorityQueue<>(new Comp());
 
         for (int i = 0; i < n; i++) {
             long start = jobs.get(i).get(0), end = jobs.get(i).get(1), profit = jobs.get(i).get(2);
@@ -48,7 +53,7 @@ class JobSchedule {
         return maxProfit;
     }
 
-    public long jobScheduling(List<Long> pickup, List<Long> drop, List<Long> tip) {
+    public static long maxTaxiEarningsSplit(List<Long> pickup, List<Long> drop, List<Long> tip) {
         List<List<Long>> jobs = new ArrayList<>();
 
         // storing job's details into one list

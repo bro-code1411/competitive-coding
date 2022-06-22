@@ -8,17 +8,17 @@ import lld.splitwise.model.split.Split;
 import java.util.List;
 
 public class SplitWiseService {
-    ExpenseService expenseService;
-    UserService userService;
+    KhataService khataService;
+    UserServiceImpl userService;
 
     public SplitWiseService() {
-        this.expenseService = new ExpenseService();
-        this.userService = new UserService();
+        this.khataService = new KhataServiceImpl();
+        this.userService = new UserServiceImpl();
     }
 
     public boolean initializeUser (User user)throws  IllegalArgumentException {
         boolean userCreated = userService.addUser(user);
-        boolean usersBookAdded = expenseService.initializeBalanceSheet(user);
+        boolean usersBookAdded = khataService.initializeBalanceSheet(user);
         if(!userCreated && !usersBookAdded){
             throw new IllegalArgumentException("User already present");
         }
@@ -27,11 +27,11 @@ public class SplitWiseService {
 
     public void addExpense(ExpenseType expenseType, double amount,
                            String expensePaidBy, List<Split> splits) {
-        expenseService.addExpense(expenseType, amount, expensePaidBy, splits);
+        khataService.addExpense(expenseType, amount, expensePaidBy, splits);
     }
 
     public void showBalance(String userName) {
-        List<String> balances = expenseService.getBalance(userName);
+        List<String> balances = khataService.getBalance(userName);
         if (balances.isEmpty()) {
             System.out.println("No balances");
         } else {
@@ -43,7 +43,7 @@ public class SplitWiseService {
 
 
     public void showBalances() {
-        List<String> balances = expenseService.getBalances();
+        List<String> balances = khataService.getBalances();
         if (balances.isEmpty()) {
             System.out.println("No balances");
         } else {

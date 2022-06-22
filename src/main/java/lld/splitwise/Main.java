@@ -6,7 +6,7 @@ import lld.splitwise.model.User;
 import lld.splitwise.model.split.Split;
 import lld.splitwise.model.split.SplitFactory;
 import lld.splitwise.service.SplitWiseService;
-import lld.splitwise.service.UserService;
+import lld.splitwise.service.UserServiceImpl;
 
 import java.util.*;
 
@@ -37,7 +37,7 @@ public class Main {
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
-        UserService userService = new UserService();
+        UserServiceImpl userService = new UserServiceImpl();
         SplitFactory splitFactory = new SplitFactory();
 
         while (true) {

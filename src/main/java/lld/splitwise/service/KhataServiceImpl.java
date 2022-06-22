@@ -8,9 +8,9 @@ import lld.splitwise.repository.ExpenseRepository;
 
 import java.util.List;
 
-public class ExpenseService {
+public class KhataServiceImpl implements KhataService{
     ExpenseRepository expenseRepository = ExpenseRepository.getInstance();
-    UserService userService = new UserService();
+    UserServiceImpl userService = new UserServiceImpl();
 
     public boolean initializeBalanceSheet(User user) {
         return expenseRepository.initializeBalanceSheet(user);

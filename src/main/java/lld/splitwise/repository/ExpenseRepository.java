@@ -1,13 +1,10 @@
 package lld.splitwise.repository;
 
 
-import lld.splitwise.model.ExpenseType;
 import lld.splitwise.model.User;
 import lld.splitwise.model.expense.Expense;
-import lld.splitwise.model.expense.ExpenseFactory;
 import lld.splitwise.model.split.Split;
-import lld.splitwise.service.ExpenseService;
-import lld.splitwise.service.UserService;
+import lld.splitwise.service.UserServiceImpl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,12 +14,12 @@ import java.util.Map;
 public class ExpenseRepository {
     List<Expense> expenses;
     Map<String, Map<String, Double>> balanceSheet;
-    UserService userService;
+    UserServiceImpl userService;
 
     private ExpenseRepository() {
         expenses = new ArrayList();
         balanceSheet = new HashMap();
-        userService = new UserService();
+        userService = new UserServiceImpl();
     }
 
     private static ExpenseRepository expenseRepository;

@@ -16,7 +16,7 @@ import java.util.HashSet;
 public class DifferenceOfStrings {
     public static void main(String[] args) {
         String a = "geeksforgeeks";
-        HashSet<String> b = new HashSet<>(){{
+        HashSet<String> b = new HashSet(){{
             add("a");
             add("geeks");
             add("for");

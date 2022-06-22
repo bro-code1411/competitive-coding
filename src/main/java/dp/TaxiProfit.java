@@ -21,26 +21,26 @@ class TaxiProfit {
     }
 
     public static long maxTaxiEarnings(int n, int[][] rides) {
-        List<Pair<Integer, Integer>>[] startToEndAndEarns = new List[n];
+        List<Pair<Integer, Integer>>[] listOfEndAndProfit = new List[n];
         // dp[i] := max dollars you can earn starting at i
         long[] dp = new long[n + 1];
 
         for (int i = 0; i < n; i++)
-            startToEndAndEarns[i] = new ArrayList<>();
+            listOfEndAndProfit[i] = new ArrayList<>();
 
         for (int[] ride : rides) {
-            final int start = ride[0];
-            final int end = ride[1];
-            final int tip = ride[2];
-            final int earn = end - start + tip;
-            startToEndAndEarns[start].add(new Pair<>(end, earn));
+            int st = ride[0];
+            int end = ride[1];
+            int tip = ride[2];
+            int profit = end - st + tip;
+            listOfEndAndProfit[st].add(new Pair<>(end, profit));
         }
 
         for (int i = n - 1; i >= 0; --i) {
             dp[i] = dp[i + 1];
-            for (var pair : startToEndAndEarns[i]) {
-                final int end = pair.getKey();
-                final int earn = pair.getValue();
+            for (Pair<Integer,Integer> pair : listOfEndAndProfit[i]) {
+                int end = pair.getKey();
+                int earn = pair.getValue();
                 dp[i] = Math.max(dp[i], dp[end] + earn);
             }
         }
@@ -58,10 +58,10 @@ class TaxiProfit {
             startToEndAndEarns[i] = new ArrayList<>();
 
         for (int i=0 ; i<pickup.length ;i++) {
-            final int start = pickup[i];
-            final int end = drop[i];
-            final int profit = tip[i];
-            final int earn = end - start + profit;
+            int start = pickup[i];
+            int end = drop[i];
+            int profit = tip[i];
+            int earn = end - start + profit;
             startToEndAndEarns[start].add(new Pair<>(end, earn));
         }
 
@@ -70,12 +70,15 @@ class TaxiProfit {
 
         for (int i = maxDrop - 1; i >= 0; --i) {
             dp[i] = dp[i + 1];
-            for (var pair : startToEndAndEarns[i]) {
-                final int end = pair.getKey();
-                final int earn = pair.getValue();
+            for (Pair<Integer, Integer> pair : startToEndAndEarns[i]) {
+                int end = pair.getKey();
+                int earn = pair.getValue();
                 dp[i] = Math.max(dp[i], dp[end] + earn);
             }
         }
         return dp[0];
+    }
+    public static long maxTaxiEarningsSplit(List<Long> pickup, List<Long>drop, List<Long>tip) {
+        return 0L;
     }
 };

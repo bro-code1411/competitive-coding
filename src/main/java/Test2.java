@@ -14,7 +14,9 @@ public class Test2 {
         System.out.println(solution2(a2,7));
 
     }
-    /* {} {11} {11,1} {11,1,5} {11,1,5,5}
+    /*
+    Jupiter money
+    {} {11} {11,1} {11,1,5} {11,1,5,5}
     0  t   t
     1  f   f
     2  f   f
